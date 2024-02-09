@@ -6,6 +6,8 @@
     <title>Seungmin&#39;s Web</title>
     <meta name="description" content="Web for Seungmin">
     <meta name="author" content="Seungmin Lee">
+
+    <!-- fabicon -->
     <link rel="shortcut icon" href="images/fabicon.ico" type="image/x-cion">
 
     <!-- OG(Open Graph Data) -->
@@ -53,57 +55,59 @@
     <main>
         <!-- Home -->
         <section id="home">
-            <img src="./images/fabicon.ico" alt="Seungmin's profile">
-            <h2>Salut! Je suis Seungmin Lee!</h2>
-            <p>Dreaming a software engineer in Paris</p>
-            <a href="#contact">Contact Me!</a>
+            <img class="home__avatar" src="./images/fabicon.ico" alt="Seungmin's profile">
+            <h2 class="home__title" >Salut! <br/> Je suis <strong class="home__title--strong">Seungmin Lee!</strong></h2>
+            <p class="home__description">Dreaming a software engineer in Paris</p>
+            <a class="home__contact" href="#contact">Contact Me!</a>
         </section>
 
         <!-- About -->
-        <section id="about">
-            <h2>About me</h2>
-            <p>J'ai vingt-cinq ans et j'habite à villejuif!</p>
-            <ul>
-                <li>
-                    <i class="fa-brands fa-html5"></i>
-                    <p>Front-end</p>
+        <section class="section max-container" id="about">
+            <h2 class="title">About me</h2>
+            <p class="description">J'ai vingt-cinq ans et j'habite à villejuif!</p>
+            <ul class="majors">
+                <li class="major">
+                    <i class="fa-brands fa-html5 major__icon"></i>
+                    <p class="major__title">Front-end</p>
                     <p>HTML, CSS, JS, TypeScript, React</p>
                 </li>
-                <li>
-                    <i class="fa-solid fa-mobile"></i>
-                    <p>Mobile</p>
+                <li class="major">
+                    <i class="fa-solid fa-mobile major__icon"></i>
+                    <p class="major__title">Mobile</p>
                     <p>Flutter</p>
                 </li>
-                <li>
-                    <i class="fa-brands fa-node"></i>
-                    <p>Back-end</p>
+                <li class="major">
+                    <i class="fa-brands fa-node major__icon"></i>
+                    <p class="major__title">Back-end</p>
                     <p>Node, Next, Rest APIs</p>
                 </li>
             </ul>
-            <ul>
-                <li>
+            <ul class="jobs">
+                <li class="job">
                     <img src="./images/jobs/google.png" alt="google">
                     <div>
-                        <p> Un jour..</p>
+                        <p class="job__name"> Un jour..</p>
+                        <p class="job__period">I will be working</p>
                     </div>
                     
                 </li>
-                <li>
+                <li class="job" >
                     <img src="./images/jobs/samsung.png" alt="samsung">
                     <div>
-                        <p> Un jour..</p>
+                        <p class="job__name"> Un jour..</p>
+                        <p class="job__period">I will be working</p>
                     </div>
                 </li>
             </ul>
         </section>
 
         <!-- Skills -->
-        <section id="skills">
-            <h2>My Skills</h2>
-            <p>Skills & Attributes</p>
+        <section class="section" id="skills">
+            <h2 class="title">My Skills</h2>
+            <p class="description">Skills & Attributes</p>
             <p>J'etudie l'informatique et le français de Paris</p>
 
-            <div>
+            
                 <section>
                     <h3>Coding Skills</h3>
                     <ul>
@@ -149,13 +153,13 @@
                         <li>Algorithms</li>
                     </ul>
                 </section>
-            </div>
+            
         </section>
 
         <!-- Work -->
-        <section id="work">
-            <h2>My Work</h2>
-            <p>Projects</p>
+        <section class="section" id="work">
+            <h2 class="title">My Work</h2>
+            <p class="description">Projects</p>
             <ul>
                 <li><button>All<span>8</span></button></li>
                 <li><button>Front-end<span>3</span></button></li>
@@ -223,9 +227,9 @@
         </section>
 
         <!-- Testimonials -->
-        <section id="testimonial">
-            <h2>Testimonials</h2>
-            <p>See what they tell about me</p>
+        <section class="section" id="testimonial">
+            <h2 class="title">Testimonials</h2>
+            <p class="description">See what they tell about me</p>
             <ul>
                 <li>
                     <img src="images/testimonials/people1.webp" alt="people1">
@@ -260,9 +264,9 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <h2>Let&#39;s talk</h2>
-        <p>dlsdk0930@gmail.com</p>
+    <footer id="contact" class="section">
+        <h2 class="title">Let&#39;s talk</h2>
+        <p class="description">dlsdk0930@gmail.com</p>
         <ul>
             <li>
                 <a href="https://github.com/itslitulinchpin2" title="my github link" target="_blank">
