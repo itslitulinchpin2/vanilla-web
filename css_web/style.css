@@ -439,3 +439,75 @@ button:focus{
     margin:0.5rem;
 
 }
+
+/* Testimonial */
+
+.testimonials{
+    margin:3rem;
+
+}
+
+.testimonial{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial:nth-child(even) .testimonial__img{
+    /* 0부터이므로 이미지가 두번째로 */
+    order:1;
+}
+
+.testimonial__img{
+    width:150px;
+    height:150px;
+    border-radius: 100%;
+}
+
+.testimonial__bubble{
+    padding:1rem;
+    border-radius: 8px;
+}
+
+.testimonial__bubble_name{
+    color:var(--color-accent);
+    font-weight:bold;
+    filter:brightness(70%);
+}
+
+/* Arrow up */
+
+.arrow-up{
+    background-color: var(--color-primary);
+    position:fixed;
+    bottom:3rem;
+    right:3rem;
+    width:4.5rem;
+    height: 4.5rem;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 100%;
+}
+
+/* Footer */
+
+#contact{
+    background-color: var(--color-primary);
+    color:var(--color-text);
+
+}
+
+.contact__links{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    padding:1rem;
+    font-size: 2rem;
+}
+.contact__link{
+    transition: color 250ms ease-in;
+}
+.contact__link:hover{
+    color:var(--color-accent);
+}
