@@ -91,7 +91,7 @@ button:focus{
 .header{
     position:fixed;
     top:0;
-    background-color: black;
+    background-color: transparent;
     padding:1rem;
     
     /* 가로로 쭉 */
@@ -108,6 +108,12 @@ button:focus{
 
     /* 헤더가 가장 높은곳으로 */
     z-index: 1;
+
+    transition: all 300mx ease;
+}
+
+.header--dark{
+    background-color: var(--color-primary);
 }
 
 .header__logo{
@@ -528,6 +534,7 @@ button:focus{
   .header{
     flex-direction: column;
     align-items: start;
+
   }
 
   .header__menu{
@@ -594,6 +601,7 @@ button:focus{
     height: 3rem;
     bottom: 1.5rem;
     right: 1.5rem;
+    transition: opacity 300ms ease-in;
 }
 
 }
