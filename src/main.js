@@ -1,3 +1,5 @@
+'use strict';
+
 //헤더 아래로 스크롤시 헤더에 다크 스타일링 적용
 
 const header = document.querySelector('.header');
@@ -33,5 +35,19 @@ document.addEventListener('scroll',()=>{
     } else {
         arrow.style.opacity=1;
     }
+})
 
+//Nav bar toggle button click 처리
+const navbarMenu = document.querySelector('.header__menu');
+const navbarToggle = document.querySelector('.header__toggle');
+
+navbarToggle.addEventListener('click',()=>{
+    
+    // on off 기능임
+    navbarMenu.classList.toggle('open');
+})
+
+//Navbar 에서 메뉴 클릭시 메뉴를 자동으로 닫아줌
+navbarMenu.addEventListener('click',()=>{
+    navbarMenu.classList.remove('open');
 })
