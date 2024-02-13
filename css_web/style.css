@@ -105,6 +105,9 @@ button:focus{
 
     /* flex 수직 정렬 */
     align-items: center;
+
+    /* 헤더가 가장 높은곳으로 */
+    z-index: 1;
 }
 
 .header__logo{
@@ -313,4 +316,126 @@ button:focus{
 .bar_value{
     height: 3px;
     background-color: var(--color-accent);
+}
+
+/* Work */
+
+#work {
+    background-color: var(--color-primary);
+    color:var(--color-text);
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    margin:2.5rem;
+    gap:1rem;
+}
+
+.category{
+    position:relative;
+    color:var(--color-text);
+    font-size:1.1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    cursor:pointer;
+    /* 공백처리 없도록, 줄바꿈 되지 않도록. */
+    white-space: nowrap;
+
+}
+
+.category__selected{
+    background-color: var(--color-accent);
+    color:var(--color-primary);
+}
+
+.category_count{
+
+    /* 기본 설정은 숨김 */
+    opacity:0;
+
+    /* static이 아닌 바디가 부모가 된다. 
+    -> 부모인 버튼의 포지션을 relative로 바꿔줘야함 */
+    position:absolute;
+    top:-20px;
+    right:16px;
+
+    width:28px;
+    height:28px;
+
+    /* 수직 중간 정렬 */
+    line-height: 28px;
+
+    border-radius: 100%;
+    background-color: var(--color-accent-variant);
+    color:var(--color-text);
+
+    transition: all 250ms ease-in;
+
+    
+}
+
+/* 아래 두가지 경우에 대하여 숫자 표시함 */
+.category__selected .category_count,
+.category:hover .category_count{
+    opacity: 1;
+    top:0;
+}
+
+.projects{
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap:1rem;
+
+}
+
+.project{
+    border-radius: 8px;
+    overflow:hidden;
+
+    position:relative;
+}
+
+.project__img{
+    width:100%
+}
+
+.project__metadata{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease-in;
+    transform: translateY(-10px);
+}
+
+.project__metadata:hover{
+    opacity:0.8;
+    transform: translateY(0px);
+
+}
+
+/* 타이틀 다음에! */
+
+.project__title:after{
+    content:'';
+    display:block;
+    position:relative;
+    left:50%;
+    width:50px;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform:translateX(-50%);
+    margin:0.5rem;
+
 }
